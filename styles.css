@@ -1,0 +1,212 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff69b4;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: #ff69b4;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 12px 24px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff5ba7;
+}
+
+/* Animated Characters Section */
+.animated-characters {
+    height: 200px;
+    position: relative;
+}
+
+.character-container {
+    position: relative;
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.character {
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+
+.anime-girl {
+    left: 25%;
+    background-image: url('https://via.placeholder.com/150x200/ff69b4/ffffff?text=AnimeGirl');
+    z-index: 2;
+}
+
+.corn {
+    right: 25%;
+    background-image: url('https://via.placeholder.com/150x200/ffff00/ffffff?text=Corn');
+    z-index: 2;
+}
+
+/* Content Section */
+.content-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.card {
+    flex-basis: calc(33.333% - 20px);
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    color: #ff69b4;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #333;
+}
+
+footer a {
+    color: #ff69b4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .card {
+        flex-basis: 100%;
+    }
+    
+    .character {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .anime-girl {
+        left: 20%;
+    }
+    
+    .corn {
+        right: 20%;
+    }
+}
+
+/* For the animation effects of the characters */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes sway {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
